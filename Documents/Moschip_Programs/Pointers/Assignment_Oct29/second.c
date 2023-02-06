@@ -1,0 +1,23 @@
+#include<stdio.h>
+void SecondHighest(int *ptr, int n)
+{
+	int i = 0, j = 0;
+
+
+	for(i = 0; i < n; i++)
+	{
+		for(j = i + 1; j < n; j++)
+		{
+			if( *(ptr+i) > *(ptr + j) )
+			{
+				*(ptr + i) = *(ptr + i) ^ *(ptr + j);
+				*(ptr + j) = *(ptr + i) ^ *(ptr + j);
+				*(ptr + i) = *(ptr + i) ^ *(ptr + j);
+			}
+		}	
+	
+
+	}
+		printf("%d\n",(ptr[n-2]) );
+}
+

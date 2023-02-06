@@ -1,0 +1,10 @@
+b. Compiling
+
+Compiling phase in C uses an inbuilt compiler software to convert the intermediate (.i) file into an Assembly file (.s) having assembly level instructions (low-level code). To boost the performance of the program compiler translates the intermediate file to make an assembly file.
+
+Assembly code is a simple English-type language used to write low-level instructions (in micro-controller programs, we use assembly la
+b. Compiling
+
+Compiling phase in C uses an inbuilt compiler software to convert the intermediate (.i) file into an Assembly file (.s) having assembly level instructions (low-level code). To boost the performance of the program compiler translates the intermediate file to make an assembly file.
+
+Assembly code is a simple English-type language used to write low-level instructions (in micro-controller programs, we use assembly la
