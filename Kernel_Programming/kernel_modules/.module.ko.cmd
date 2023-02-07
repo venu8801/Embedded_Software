@@ -1,0 +1,1 @@
+cmd_/home/engineer/venu/Kernel_Programming/Modules/module.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/engineer/venu/Kernel_Programming/Modules/module.ko /home/engineer/venu/Kernel_Programming/Modules/module.o /home/engineer/venu/Kernel_Programming/Modules/module.mod.o;  true

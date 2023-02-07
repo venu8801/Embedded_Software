@@ -1,0 +1,1 @@
+cmd_/home/engineer/venu/Kernel_Programming/kernel_modules/module1.mod := { echo  /home/engineer/venu/Kernel_Programming/kernel_modules/module1.o;  echo; } > /home/engineer/venu/Kernel_Programming/kernel_modules/module1.mod
