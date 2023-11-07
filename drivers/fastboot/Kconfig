@@ -94,17 +94,47 @@ config FASTBOOT_FLASH
 	  this to enable the "fastboot flash" command.
 
 config FASTBOOT_UUU_SUPPORT
-	bool "Enable UUU support"
+config FSL_FASTBOOT
+	bool "Enable FSL fastboot support"
+	depends on FASTBOOT_FLASH
 	help
-	  This extends the fastboot protocol with the "UCmd" and "ACmd"
-	  commands, which are used by NXP's "universal update utility" (UUU).
-	  These commands allow running any shell command. Do not enable this
-	  feature if you are using verified boot, as it will allow an attacker
-	  to bypass any restrictions you have in place.
+	  This enables FSL implementation for Android fastboot.
+
+config ANDROID_RECOVERY
+	bool "Enable the recovery boot function"
+	depends on FSL_FASTBOOT
+	help
+	  This enables the Android Recovery boot function.
+
+config CMD_BOOTA
+	bool "Enable the boota command"
+	depends on FSL_FASTBOOT
+	help
+	  This enables the boota command for booting android images.
+
+config BCB_SUPPORT
+	bool "Enable the boot control block support"
+	depends on FSL_FASTBOOT
+	help
+	  This enables the boot control block support for android reboot command
+
+config FASTBOOT_LOCK
+	bool "Enable the lock and unlock feature to the partitions"
+	depends on FSL_FASTBOOT
+	help
+	  This enables the lock support for android flashing command
+
+config FASTBOOT_USB_DEV
+	int "USB controller number"
+	default 0
+	help
+	  Some boards have USB OTG controller other than 0. Define this
+	  option so it can be used in compiled environment (e.g. in
+	  CONFIG_BOOTCOMMAND).
 
 choice
 	prompt "Flash provider for FASTBOOT"
-	depends on FASTBOOT_FLASH
+	depends on FASTBOOT_FLASH && !FSL_FASTBOOT
 
 config FASTBOOT_FLASH_MMC
 	bool "FASTBOOT on MMC"

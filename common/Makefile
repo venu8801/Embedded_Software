@@ -10,6 +10,11 @@ obj-y += main.o
 obj-y += exports.o
 obj-$(CONFIG_HUSH_PARSER) += cli_hush.o
 obj-$(CONFIG_AUTOBOOT) += autoboot.o
+# Android
+
+#`obj-$(CONFIG_ANDROID_BOOT_IMAGE) += image-android.o
+
+
 
 # # boards
 obj-y += board_f.o

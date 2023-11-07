@@ -1,0 +1,6 @@
+config PHYTEC_IMX8M_SOM_DETECTION
+	bool "Support SoM detection for i.MX8M Phytec platforms"
+	default y
+	help
+	   Support of I2C EEPROM based SoM detection. Supported
+	   for PHYTEC i.MX8M/i.MX8MM/i.MX8MN/i.MX8MP boards.

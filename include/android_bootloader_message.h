@@ -187,6 +187,17 @@ static_assert(sizeof(struct bootloader_control) ==
 #endif
 #endif /* __UBOOT__ */
 
+typedef struct misc_virtual_ab_message {
+  uint8_t version;
+  uint32_t magic;
+  uint8_t merge_status;  // IBootControl 1.1, MergeStatus enum.
+  uint8_t source_slot;   // Slot number when merge_status was written.
+  uint8_t reserved[57];
+} __attribute__((packed)) misc_virtual_ab_message;
+
+#define MISC_VIRTUAL_AB_MESSAGE_VERSION 2
+#define MISC_VIRTUAL_AB_MAGIC_HEADER 0x56740AB0
+
 #ifndef __UBOOT__
 #ifdef __cplusplus
 

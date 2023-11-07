@@ -56,7 +56,7 @@ struct block_drvr {
 #define PART_BOOTABLE			((int)BIT(0))
 #define PART_EFI_SYSTEM_PARTITION	((int)BIT(1))
 
-struct disk_partition {
+typedef struct disk_partition {
 	lbaint_t	start;	/* # of first block in partition	*/
 	lbaint_t	size;	/* number of blocks in partition	*/
 	ulong	blksz;		/* block size in bytes			*/
@@ -78,7 +78,7 @@ struct disk_partition {
 #ifdef CONFIG_DOS_PARTITION
 	uchar	sys_ind;	/* partition type			*/
 #endif
-};
+} disk_partition_t;
 
 struct disk_part {
 	int partnum;

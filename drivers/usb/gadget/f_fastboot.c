@@ -38,6 +38,12 @@
  * that expect bulk OUT requests to be divisible by maxpacket size.
  */
 
+typedef struct usb_req usb_req;
+struct usb_req {
+	struct usb_request *in_req;
+	usb_req *next;
+};
+
 struct f_fastboot {
 	struct usb_function usb_function;
 
@@ -398,7 +404,50 @@ static int fastboot_add(struct usb_configuration *c)
 }
 DECLARE_GADGET_BIND_CALLBACK(usb_dnl_fastboot, fastboot_add);
 
-static int fastboot_tx_write(const char *buffer, unsigned int buffer_size)
+int fastboot_tx_write_more(const char *buffer)
+{
+	int ret = 0;
+
+	/* alloc usb request FIFO node */
+	usb_req *req = (usb_req *)malloc(sizeof(usb_req));
+	if (!req) {
+		printf("failed alloc usb req!\n");
+		return -ENOMEM;
+	}
+
+	/* usb request node FIFO enquene */
+	if ((fastboot_func->front == NULL) && (fastboot_func->rear == NULL)) {
+		fastboot_func->front = fastboot_func->rear = req;
+		req->next = NULL;
+	} else {
+		fastboot_func->rear->next = req;
+		fastboot_func->rear = req;
+		req->next = NULL;
+	}
+
+	/* alloc in request for current node */
+	req->in_req = fastboot_start_ep(fastboot_func->in_ep);
+	if (!req->in_req) {
+		printf("failed alloc req in\n");
+		fastboot_disable(&(fastboot_func->usb_function));
+		return  -EINVAL;
+	}
+	req->in_req->complete = fastboot_fifo_complete;
+
+	memcpy(req->in_req->buf, buffer, strlen(buffer));
+	req->in_req->length = strlen(buffer);
+
+	ret = usb_ep_queue(fastboot_func->in_ep, req->in_req, 0);
+	if (ret) {
+		printf("Error %d on queue\n", ret);
+		return -EINVAL;
+	}
+
+	ret = 0;
+	return ret;
+}
+
+int fastboot_tx_write(const char *buffer, unsigned int buffer_size)
 {
 	struct usb_request *in_req = fastboot_func->in_req;
 	int ret;

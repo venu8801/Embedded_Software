@@ -50,6 +50,17 @@ struct andr_boot_img_hdr_v3 {
 	u32 signature_size; /* size in bytes */
 };
 
+
+struct boot_metric
+{
+	u32 bll_1;	/* 1th bootloader load duration */
+	u32 ble_1;	/* 1th bootloader exec duration */
+	u32 kl;		/* kernel image load duration */
+	u32 kd;		/* kernel image decompress duration */
+	u32 avb;	/* avb verify boot.img duration */
+	u32 odt;	/* overlay device tree duration */
+	u32 sw;		/* system wait for UI interaction duration*/
+};
 struct andr_vnd_boot_img_hdr {
 	u8 magic[ANDR_VENDOR_BOOT_MAGIC_SIZE];
 	u32 header_version;
@@ -74,6 +85,7 @@ struct andr_vnd_boot_img_hdr {
 	u32 vendor_ramdisk_table_entry_size; /* size in bytes for a vendor ramdisk table entry */
 	u32 bootconfig_size; /* size in bytes for the bootconfig section */
 };
+typedef struct boot_metric boot_metric;
 
 /* The bootloader expects the structure of andr_boot_img_hdr_v0 with header
  * version 0 to be as follows: */
@@ -120,6 +132,66 @@ struct andr_boot_img_hdr_v0 {
     /* Fields in boot_img_hdr_v2 and newer. */
     u32 dtb_size; /* size in bytes for DTB image */
     u64 dtb_addr; /* physical load address for DTB image */
+} __attribute__((packed));
+
+struct boot_img_hdr_v3 {
+    // Must be BOOT_MAGIC.
+    uint8_t magic[ANDR_BOOT_MAGIC_SIZE];
+
+    uint32_t kernel_size; /* size in bytes */
+    uint32_t ramdisk_size; /* size in bytes */
+
+    // Operating system version and security patch level.
+    // For version "A.B.C" and patch level "Y-M-D":
+    //   (7 bits for each of A, B, C; 7 bits for (Y-2000), 4 bits for M)
+    //   os_version = A[31:25] B[24:18] C[17:11] (Y-2000)[10:4] M[3:0]
+    uint32_t os_version;
+
+#if __cplusplus
+    void SetOsVersion(unsigned major, unsigned minor, unsigned patch) {
+        os_version &= ((1 << 11) - 1);
+        os_version |= (((major & 0x7f) << 25) | ((minor & 0x7f) << 18) | ((patch & 0x7f) << 11));
+    }
+
+    void SetOsPatchLevel(unsigned year, unsigned month) {
+        os_version &= ~((1 << 11) - 1);
+        os_version |= (((year - 2000) & 0x7f) << 4) | ((month & 0xf) << 0);
+    }
+#endif
+
+    uint32_t header_size;
+
+    uint32_t reserved[4];
+
+    // Version of the boot image header.
+    uint32_t header_version;
+
+    uint8_t cmdline[ANDR_BOOT_ARGS_SIZE + ANDR_BOOT_EXTRA_ARGS_SIZE];
+} __attribute__((packed));
+
+struct vendor_boot_img_hdr_v3 {
+    // Must be ANDR_VENDOR_BOOT_MAGIC.
+    uint8_t magic[ANDR_VENDOR_BOOT_MAGIC_SIZE];
+
+    // Version of the vendor boot image header.
+    uint32_t header_version;
+
+    uint32_t page_size; /* flash page size we assume */
+
+    uint32_t kernel_addr; /* physical load addr */
+    uint32_t ramdisk_addr; /* physical load addr */
+
+    uint32_t vendor_ramdisk_size; /* size in bytes */
+
+    uint8_t cmdline[ANDR_VENDOR_BOOT_ARGS_SIZE];
+
+    uint32_t tags_addr; /* physical addr for kernel tags (if required) */
+    uint8_t name[ANDR_VENDOR_BOOT_NAME_SIZE]; /* asciiz product name */
+
+    uint32_t header_size;
+
+    uint32_t dtb_size; /* size in bytes for DTB image */
+    uint64_t dtb_addr; /* physical load address for DTB image */
 } __attribute__((packed));
 
 /* When a boot header is of version 0, the structure of boot image is as
@@ -357,5 +429,16 @@ struct andr_image_data {
 	u32 boot_img_total_size;  /* boot image size */
 	u32 vendor_boot_img_total_size;  /* vendor boot image size */
 };
-
+struct header_image {
+	uint32_t	code0;		/* Executable code */
+	uint32_t	code1;		/* Executable code */
+	uint64_t	text_offset;	/* Image load offset, LE */
+	uint64_t	image_size;	/* Effective Image size, LE */
+	uint64_t	res1;		/* reserved */
+	uint64_t	res2;		/* reserved */
+	uint64_t	res3;		/* reserved */
+	uint64_t	res4;		/* reserved */
+	uint32_t	magic;		/* Magic number */
+	uint32_t	res5;
+};
 #endif

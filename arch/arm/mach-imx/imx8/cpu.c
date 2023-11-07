@@ -364,7 +364,12 @@ enum boot_device get_boot_device(void)
 	return boot_dev;
 }
 
-#ifdef CONFIG_ENV_VARS_UBOOT_RUNTIME_CONFIG
+bool is_usb_boot(void)
+{
+	return get_boot_device() == USB_BOOT;
+}
+
+#ifdef CONFIG_SERIAL_TAG
 #define FUSE_UNIQUE_ID_WORD0 16
 #define FUSE_UNIQUE_ID_WORD1 17
 void get_board_serial(struct tag_serialnr *serialnr)

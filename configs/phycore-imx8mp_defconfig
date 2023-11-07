@@ -27,7 +27,7 @@ CONFIG_FIT_EXTERNAL_OFFSET=0x3000
 CONFIG_SPL_LOAD_FIT=y
 CONFIG_OF_SYSTEM_SETUP=y
 CONFIG_USE_BOOTCOMMAND=y
-CONFIG_BOOTCOMMAND="mmc dev ${mmcdev}; if mmc rescan; then if run loadimage; then run mmcboot; else run netboot; fi; fi;"
+CONFIG_BOOTCOMMAND="mmc dev 1; if mmc rescan; then if run loadimage; then run mmcboot; else run netboot; fi; fi;"
 CONFIG_DEFAULT_FDT_FILE="oftree"
 CONFIG_BOARD_LATE_INIT=y
 CONFIG_SPL_MAX_SIZE=0x26000
@@ -51,7 +51,7 @@ CONFIG_HUSH_PARSER=y
 CONFIG_SYS_MAXARGS=64
 CONFIG_SYS_CBSIZE=2048
 CONFIG_SYS_PBSIZE=2074
-# CONFIG_CMD_EXPORTENV is not set
+CONFIG_CMD_EXPORTENV=y
 # CONFIG_CMD_IMPORTENV is not set
 # CONFIG_CMD_CRC32 is not set
 CONFIG_CMD_EEPROM=y

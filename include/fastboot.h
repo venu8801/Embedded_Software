@@ -39,6 +39,26 @@ enum {
 	FASTBOOT_COMMAND_OEM_RUN,
 	FASTBOOT_COMMAND_ACMD,
 	FASTBOOT_COMMAND_UCMD,
+#ifdef CONFIG_FSL_FASTBOOT
+	FASTBOOT_COMMAND_UPLOAD,
+	FASTBOOT_COMMAND_GETSTAGED,
+#ifdef CONFIG_FASTBOOT_LOCK
+	FASTBOOT_COMMAND_FLASHING,
+	FASTBOOT_COMMAND_OEM,
+#endif
+#ifdef CONFIG_AVB_SUPPORT
+	FASTBOOT_COMMAND_SETACTIVE,
+#endif
+#ifdef CONFIG_AVB_ATX
+	FASTBOOT_COMMAND_STAGE,
+#endif
+#endif
+#ifdef CONFIG_ANDROID_RECOVERY
+	FASTBOOT_COMMAND_RECOVERY_FASTBOOT,
+#endif
+#ifdef CONFIG_VIRTUAL_AB_SUPPORT
+	FASTBOOT_COMMAND_SNAPSHOT_UPDATE,
+#endif
 	FASTBOOT_COMMAND_COUNT
 };
 
@@ -89,7 +109,7 @@ void fastboot_okay(const char *reason, char *response);
  * which sets whatever flag your board specific Android bootloader flow
  * requires in order to re-enter the bootloader.
  */
-int fastboot_set_reboot_flag(enum fastboot_reboot_reason reason);
+int fastboot_set_reboot_flag(void);
 
 /**
  * fastboot_set_progress_callback() - set progress callback
@@ -173,4 +193,6 @@ void fastboot_data_download(const void *fastboot_data,
 void fastboot_data_complete(char *response);
 
 void fastboot_acmd_complete(void);
+int fastboot_tx_write_more(const char *buffer);
+int fastboot_tx_write(const char *buffer, unsigned int buffer_size);
 #endif /* _FASTBOOT_H_ */
