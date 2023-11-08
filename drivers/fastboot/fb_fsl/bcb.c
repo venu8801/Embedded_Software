@@ -11,6 +11,7 @@
 #include <g_dnl.h>
 #include <mmc.h>
 #include "bcb.h"
+#include<command.h>
 #define ALIGN_BYTES 64 /*armv7 cache line need 64 bytes aligned */
 
 static ulong get_block_size(char *ifname, int dev)
@@ -147,7 +148,7 @@ int bcb_rw_block(bool bread, char **ppblock,
 			return -1;
 		}
 		sprintf(addr_str, "0x%x", (unsigned int)(uintptr_t)p_block);
-		ret = do_raw_read(NULL, 0, 6, argv);
+		ret = do_rw(NULL, 0, 6, argv);
 		if (ret) {
 			free(p_block);
 			printf("do_raw_read failed, ret %d\n", ret);

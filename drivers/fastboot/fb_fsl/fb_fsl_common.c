@@ -50,6 +50,9 @@ extern void trusty_os_init(void);
 
 #include <serial.h>
 #include <stdio_dev.h>
+ inline void get_board_serial(struct tag_serialnr *serialnr)
+{
+}
 
 #if defined(CONFIG_AVB_SUPPORT) && defined(CONFIG_MMC)
 AvbABOps fsl_avb_ab_ops = {

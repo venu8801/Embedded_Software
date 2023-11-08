@@ -49,7 +49,8 @@ struct f_fastboot {
 
 	/* IN/OUT EP's and corresponding requests */
 	struct usb_ep *in_ep, *out_ep;
-	struct usb_request *in_req, *out_req;
+	struct usb_request *in_req, *out_req;	
+	usb_req *front, *rear;
 };
 
 static char fb_ext_prop_name[] = "DeviceInterfaceGUID";
@@ -200,6 +201,24 @@ static struct usb_gadget_strings *fastboot_strings[] = {
 };
 
 static void rx_handler_command(struct usb_ep *ep, struct usb_request *req);
+
+static void fastboot_fifo_complete(struct usb_ep *ep, struct usb_request *req)
+{
+	int status = req->status;
+	usb_req *request;
+
+	if (!status) {
+		if (fastboot_func->front != NULL) {
+			request = fastboot_func->front;
+			fastboot_func->front = fastboot_func->front->next;
+			usb_ep_free_request(ep, request->in_req);
+			free(request);
+		} else {
+			printf("fail free request\n");
+		}
+		return;
+	}
+}
 
 static void fastboot_complete(struct usb_ep *ep, struct usb_request *req)
 {

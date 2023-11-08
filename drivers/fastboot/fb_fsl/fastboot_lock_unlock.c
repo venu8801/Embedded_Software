@@ -20,12 +20,18 @@
 #endif
 #include<configs/phycore_imx8mp_android.h>
 #include <fsl_avb.h>
-
 #ifdef FASTBOOT_ENCRYPT_LOCK
-
+#include<asm/arch-imx8/imx-regs.h>
 #include <hash.h>
 #include <fsl_caam.h>
+#include<linux/delay.h>
 
+#define is_boot_from_usb  is_usb_boot
+
+bool is_usb_boot(void)
+{
+        return get_boot_device() == USB_BOOT;
+}
 //Encrypted data is 80bytes length.
 #define ENDATA_LEN 80
 

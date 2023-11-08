@@ -186,7 +186,7 @@ static void reboot_bootloader(char *cmd_parameter, char *response)
 {
 	enable_fastboot_command();
 
-	if (fastboot_set_reboot_flag())
+	if (fastboot_set_reboot_flag(FASTBOOT_REBOOT_REASON_BOOTLOADER))
 		fastboot_fail("Cannot set reboot flag", response);
 	else
 		fastboot_okay(NULL, response);
@@ -203,7 +203,7 @@ static void reboot_fastboot(char *cmd_parameter, char *response)
 {
 	enable_recovery_fastboot();
 
-	if (fastboot_set_reboot_flag())
+	if (fastboot_set_reboot_flag(FASTBOOT_REBOOT_REASON_FASTBOOTD))
 		fastboot_fail("Cannot set reboot flag", response);
 	else
 		fastboot_okay(NULL, response);
@@ -940,7 +940,7 @@ static void erase(char *cmd, char *response)
  * set with another way. Redefine this function to override the weak
  * definition to avoid error return value.
  */
-int fastboot_set_reboot_flag(void)
+int fastboot_set_reboot_flag(enum fastboot_reboot_reason reason)
 {
 	return 0;
 }
