@@ -6,6 +6,8 @@
 ifndef CONFIG_SPL_BUILD
 # core command
 obj-y += boot.o
+obj-y += custom_cmd.o
+#obj-y += fb_fsl_boot.o  #added by venu
 obj-$(CONFIG_CMD_BOOTM) += bootm.o
 obj-y += help.o
 obj-y += panic.o
@@ -38,7 +40,7 @@ obj-$(CONFIG_CMD_BOOTEFI) += bootefi.o
 obj-$(CONFIG_CMD_BOOTMENU) += bootmenu.o
 obj-$(CONFIG_CMD_BOOTSTAGE) += bootstage.o
 obj-$(CONFIG_CMD_BOOTZ) += bootz.o
-obj-$(CONFIG_CMD_BOOTI) += booti.o
+obj-$(CONFIG_CMD_BOOTI) += booti.o 
 obj-$(CONFIG_CMD_BTRFS) += btrfs.o
 obj-$(CONFIG_CMD_BUTTON) += button.o
 obj-$(CONFIG_CMD_CAT) += cat.o

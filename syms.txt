@@ -1,0 +1,483 @@
+
+keep-syms-lto.o:     file format elf64-little
+
+SYMBOL TABLE:
+0000000000000000 l    df *ABS*	0000000000000000 keep-syms-lto.c
+0000000000000000 l    d  .text	0000000000000000 .text
+0000000000000000 l    d  .data	0000000000000000 .data
+0000000000000000 l    d  .bss	0000000000000000 .bss
+0000000000000000 l    d  .discard.addressable	0000000000000000 .discard.addressable
+0000000000000000 l       .discard.addressable	0000000000000000 $d
+0000000000000000 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_usb_driver_entry_2_usb_mass_storage231
+0000000000000008 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_usb_driver_entry_2_usb_generic_hub230
+0000000000000010 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_wdt229
+0000000000000018 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_usb_mass_storage228
+0000000000000020 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_usb_hub227
+0000000000000028 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_usb_gadget_generic226
+0000000000000030 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_usb_dev_generic225
+0000000000000038 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_usb224
+0000000000000040 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_thermal223
+0000000000000048 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_sysreset222
+0000000000000050 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_simple_bus221
+0000000000000058 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_serial220
+0000000000000060 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_root219
+0000000000000068 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_regulator218
+0000000000000070 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_pinctrl217
+0000000000000078 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_pinconfig216
+0000000000000080 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_phy215
+0000000000000088 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_partition214
+0000000000000090 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_nop213
+0000000000000098 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_mmc212
+00000000000000a0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_misc211
+00000000000000a8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_i2c_generic210
+00000000000000b0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_i2c_eeprom209
+00000000000000b8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_i2c208
+00000000000000c0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_gpio207
+00000000000000c8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_firmware206
+00000000000000d0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_ethernet205
+00000000000000d8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_eth_phy_generic204
+00000000000000e0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_efi203
+00000000000000e8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_clk202
+00000000000000f0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_bootstd201
+00000000000000f8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_bootmeth200
+0000000000000100 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_bootdev199
+0000000000000108 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_uclass_driver_2_blk198
+0000000000000110 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_phy_driver_2_genphy197
+0000000000000118 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_phy_driver_2_dp83867196
+0000000000000120 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_part_driver_2_dos195
+0000000000000128 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_part_driver_2_a_efi194
+0000000000000130 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_g_dnl_bind_callbacks_2___usb_function_name_usb_dnl_ums193
+0000000000000138 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_g_dnl_bind_callbacks_2___usb_function_name_usb_dnl_fastboot192
+0000000000000140 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_evspy_info_2_EVT_FT_FIXUP_3_bootmeth_vbe_simple_ft_fixup191
+0000000000000148 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_evspy_info_2_EVT_FT_FIXUP_3_bootmeth_vbe_ft_fixup190
+0000000000000150 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_evspy_info_2_EVT_DM_POST_INIT_F_3_imx8m_check_clock189
+0000000000000158 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_driver_2_mmc188
+0000000000000160 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_vlan187
+0000000000000168 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_serverip186
+0000000000000170 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_serialno185
+0000000000000178 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_nvlan184
+0000000000000180 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_netmask183
+0000000000000188 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_loadaddr182
+0000000000000190 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_ipaddr181
+0000000000000198 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_gatewayip180
+00000000000001a0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_flags179
+00000000000001a8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_ethaddr178
+00000000000001b0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_console177
+00000000000001b8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_callbacks176
+00000000000001c0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_env_clbk_2_baudrate175
+00000000000001c8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_xhci_dwc3174
+00000000000001d0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_wdt_reboot173
+00000000000001d8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_vbe_simple172
+00000000000001e0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_usb_storage_blk171
+00000000000001e8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_usb_mass_storage170
+00000000000001f0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_usb_generic_hub169
+00000000000001f8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_usb_dev_generic_drv168
+0000000000000200 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_usb_bootdev167
+0000000000000208 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_simple_bus166
+0000000000000210 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_serial_mxc165
+0000000000000218 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_root_driver164
+0000000000000220 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_regulator_fixed_clock163
+0000000000000228 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_regulator_fixed162
+0000000000000230 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_psci_sysreset161
+0000000000000238 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_psci160
+0000000000000240 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_pinconfig_generic159
+0000000000000248 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_nxp_imx8mq_usb_phy158
+0000000000000250 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_mmc_bootdev157
+0000000000000258 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_mmc_blk156
+0000000000000260 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_imx_wdt155
+0000000000000268 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_imx_clk_fixed_factor154
+0000000000000270 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_imx8mq_pinctrl153
+0000000000000278 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_imx8mp_clk152
+0000000000000280 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_i2c_mxc151
+0000000000000288 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_i2c_generic_chip_drv150
+0000000000000290 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_i2c_eeprom_std149
+0000000000000298 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_i2c_eeprom_partition148
+00000000000002a0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_gpio_regulator147
+00000000000002a8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_gpio_mxc146
+00000000000002b0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_fsl_esdhc145
+00000000000002b8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_fixed_clock144
+00000000000002c0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_fecmxc_gem143
+00000000000002c8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_eth_phy_generic_drv142
+00000000000002d0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_eth_bootdev141
+00000000000002d8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_efi_block140
+00000000000002e0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_efi_blk139
+00000000000002e8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_dwc3_of_simple138
+00000000000002f0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_dwc3_generic_wrapper137
+00000000000002f8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_dwc3_generic_peripheral136
+0000000000000300 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_dwc3_generic_host135
+0000000000000308 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pllv3_usb134
+0000000000000310 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pllv3_sys133
+0000000000000318 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pllv3_genericv2132
+0000000000000320 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pllv3_generic131
+0000000000000328 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pllv3_enet130
+0000000000000330 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pllv3_av129
+0000000000000338 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pll1443x128
+0000000000000340 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pll1416x127
+0000000000000348 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_pfd126
+0000000000000350 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_gate2125
+0000000000000358 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_gate124
+0000000000000360 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_fixed_rate_raw123
+0000000000000368 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_fixed_factor122
+0000000000000370 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_clk_composite121
+0000000000000378 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_ccf_clk_mux120
+0000000000000380 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_ccf_clk_divider119
+0000000000000388 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_bootstd_drv118
+0000000000000390 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_bootmeth_efi117
+0000000000000398 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_bootmeth_1extlinux116
+00000000000003a0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_driver_2_blk_partition115
+00000000000003a8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_write114
+00000000000003b0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_version113
+00000000000003b8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_usbboot112
+00000000000003c0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_usb111
+00000000000003c8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_unzip110
+00000000000003d0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_unlz4109
+00000000000003d8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_unbind108
+00000000000003e0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_true107
+00000000000003e8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_tftpboot106
+00000000000003f0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_test105
+00000000000003f8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_source104
+0000000000000400 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_sleep103
+0000000000000408 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_size102
+0000000000000410 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_showvar101
+0000000000000418 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_setexpr100
+0000000000000420 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_setenv99
+0000000000000428 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_saveenv98
+0000000000000430 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_save97
+0000000000000438 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_run96
+0000000000000440 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_reset95
+0000000000000448 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_regulator94
+0000000000000450 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_read93
+0000000000000458 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_random92
+0000000000000460 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_question_mark91
+0000000000000468 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_printenv90
+0000000000000470 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_pinmux89
+0000000000000478 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ping88
+0000000000000480 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_part87
+0000000000000488 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_panic86
+0000000000000490 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_nm85
+0000000000000498 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_net84
+00000000000004a0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_mw83
+00000000000004a8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_mmcinfo82
+00000000000004b0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_mmc81
+00000000000004b8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_mm80
+00000000000004c0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_mii79
+00000000000004c8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_mdio78
+00000000000004d0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_md77
+00000000000004d8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_lzmadec76
+00000000000004e0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ls75
+00000000000004e8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_loop74
+00000000000004f0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_lock_status73
+00000000000004f8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_loady72
+0000000000000500 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_loadx71
+0000000000000508 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_loads70
+0000000000000510 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_loadb69
+0000000000000518 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_load68
+0000000000000520 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ln67
+0000000000000528 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_itest66
+0000000000000530 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_imxtract65
+0000000000000538 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_iminfo64
+0000000000000540 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_icache63
+0000000000000548 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_i2c62
+0000000000000550 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_help61
+0000000000000558 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_gzwrite60
+0000000000000560 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_gpt59
+0000000000000568 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_gpio58
+0000000000000570 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_go57
+0000000000000578 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fuse56
+0000000000000580 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fsuuid55
+0000000000000588 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fstypes54
+0000000000000590 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fstype53
+0000000000000598 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fdt52
+00000000000005a0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fatwrite51
+00000000000005a8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fatsize50
+00000000000005b0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fatrm49
+00000000000005b8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fatmkdir48
+00000000000005c0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fatls47
+00000000000005c8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fatload46
+00000000000005d0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fatinfo45
+00000000000005d8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_fastboot44
+00000000000005e0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_false43
+00000000000005e8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ext4write42
+00000000000005f0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ext4size41
+00000000000005f8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ext4ls40
+0000000000000600 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ext4load39
+0000000000000608 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ext2ls38
+0000000000000610 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ext2load37
+0000000000000618 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_exit36
+0000000000000620 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_env35
+0000000000000628 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_eficonfig34
+0000000000000630 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_eeprom33
+0000000000000638 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_editenv32
+0000000000000640 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_echo31
+0000000000000648 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_dm30
+0000000000000650 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_dhcp29
+0000000000000658 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_dcache28
+0000000000000660 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_cyclic27
+0000000000000668 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_cp26
+0000000000000670 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_coninfo25
+0000000000000678 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_cmp24
+0000000000000680 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_clk23
+0000000000000688 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_btrsubvol22
+0000000000000690 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bootvx21
+0000000000000698 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bootp20
+00000000000006a0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bootm19
+00000000000006a8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_booti18
+00000000000006b0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bootflow17
+00000000000006b8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bootelf16
+00000000000006c0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bootefi15
+00000000000006c8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bootd14
+00000000000006d0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_boot13
+00000000000006d8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_blkcache12
+00000000000006e0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bind11
+00000000000006e8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bdinfo10
+00000000000006f0 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_bcb9
+00000000000006f8 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_base8
+0000000000000700 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_avb7
+0000000000000708 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_askenv6
+0000000000000710 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_adtimg5
+0000000000000718 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_abootimg4
+0000000000000720 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_cmd_2_ab_select3
+0000000000000728 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_bootdev_hunter_2_usb_bootdev_hunter2
+0000000000000730 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_bootdev_hunter_2_mmc_bootdev_hunter1
+0000000000000738 l     O .discard.addressable	0000000000000008 __UNIQUE_ID___addressable__u_boot_list_2_bootdev_hunter_2_eth_bootdev_hunt0
+0000000000000000 l    d  .debug_info	0000000000000000 .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000 .debug_abbrev
+0000000000000000 l    d  .debug_aranges	0000000000000000 .debug_aranges
+0000000000000000 l    d  .debug_line	0000000000000000 .debug_line
+0000000000000000 l    d  .debug_str	0000000000000000 .debug_str
+0000000000000000 l    d  .note.GNU-stack	0000000000000000 .note.GNU-stack
+0000000000000000 l    d  .comment	0000000000000000 .comment
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_usb_driver_entry_2_usb_mass_storage
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_usb_driver_entry_2_usb_generic_hub
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_wdt
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_usb_mass_storage
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_usb_hub
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_usb_gadget_generic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_usb_dev_generic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_usb
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_thermal
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_sysreset
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_simple_bus
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_serial
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_root
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_regulator
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_pinctrl
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_pinconfig
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_phy
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_partition
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_nop
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_mmc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_misc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_i2c_generic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_i2c_eeprom
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_i2c
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_gpio
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_firmware
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_ethernet
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_eth_phy_generic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_efi
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_clk
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_bootstd
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_bootmeth
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_bootdev
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_uclass_driver_2_blk
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_phy_driver_2_genphy
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_phy_driver_2_dp83867
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_part_driver_2_dos
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_part_driver_2_a_efi
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_g_dnl_bind_callbacks_2___usb_function_name_usb_dnl_ums
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_g_dnl_bind_callbacks_2___usb_function_name_usb_dnl_fastboot
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_evspy_info_2_EVT_FT_FIXUP_3_bootmeth_vbe_simple_ft_fixup
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_evspy_info_2_EVT_FT_FIXUP_3_bootmeth_vbe_ft_fixup
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_evspy_info_2_EVT_DM_POST_INIT_F_3_imx8m_check_clock
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_driver_2_mmc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_vlan
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_serverip
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_serialno
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_nvlan
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_netmask
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_loadaddr
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_ipaddr
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_gatewayip
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_flags
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_ethaddr
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_console
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_callbacks
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_env_clbk_2_baudrate
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_xhci_dwc3
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_wdt_reboot
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_vbe_simple
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_usb_storage_blk
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_usb_mass_storage
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_usb_generic_hub
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_usb_dev_generic_drv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_usb_bootdev
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_simple_bus
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_serial_mxc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_root_driver
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_regulator_fixed_clock
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_regulator_fixed
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_psci_sysreset
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_psci
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_pinconfig_generic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_nxp_imx8mq_usb_phy
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_mmc_bootdev
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_mmc_blk
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_imx_wdt
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_imx_clk_fixed_factor
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_imx8mq_pinctrl
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_imx8mp_clk
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_i2c_mxc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_i2c_generic_chip_drv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_i2c_eeprom_std
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_i2c_eeprom_partition
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_gpio_regulator
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_gpio_mxc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_fsl_esdhc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_fixed_clock
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_fecmxc_gem
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_eth_phy_generic_drv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_eth_bootdev
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_efi_block
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_efi_blk
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_dwc3_of_simple
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_dwc3_generic_wrapper
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_dwc3_generic_peripheral
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_dwc3_generic_host
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pllv3_usb
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pllv3_sys
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pllv3_genericv2
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pllv3_generic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pllv3_enet
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pllv3_av
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pll1443x
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pll1416x
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_pfd
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_gate2
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_gate
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_fixed_rate_raw
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_fixed_factor
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_clk_composite
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_ccf_clk_mux
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_ccf_clk_divider
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_bootstd_drv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_bootmeth_efi
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_bootmeth_1extlinux
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_driver_2_blk_partition
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_write
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_version
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_usbboot
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_usb
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_unzip
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_unlz4
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_unbind
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_true
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_tftpboot
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_test
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_source
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_sleep
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_size
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_showvar
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_setexpr
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_setenv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_saveenv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_save
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_run
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_reset
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_regulator
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_read
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_random
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_question_mark
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_printenv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_pinmux
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ping
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_part
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_panic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_nm
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_net
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_mw
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_mmcinfo
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_mmc
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_mm
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_mii
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_mdio
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_md
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_lzmadec
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ls
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_loop
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_lock_status
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_loady
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_loadx
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_loads
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_loadb
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_load
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ln
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_itest
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_imxtract
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_iminfo
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_icache
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_i2c
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_help
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_gzwrite
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_gpt
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_gpio
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_go
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fuse
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fsuuid
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fstypes
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fstype
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fdt
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fatwrite
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fatsize
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fatrm
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fatmkdir
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fatls
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fatload
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fatinfo
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_fastboot
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_false
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ext4write
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ext4size
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ext4ls
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ext4load
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ext2ls
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ext2load
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_exit
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_env
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_eficonfig
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_eeprom
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_editenv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_echo
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_dm
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_dhcp
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_dcache
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_cyclic
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_cp
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_coninfo
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_cmp
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_clk
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_btrsubvol
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bootvx
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bootp
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bootm
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_booti
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bootflow
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bootelf
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bootefi
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bootd
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_boot
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_blkcache
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bind
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bdinfo
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_bcb
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_base
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_avb
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_askenv
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_adtimg
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_abootimg
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_cmd_2_ab_select
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_bootdev_hunter_2_usb_bootdev_hunter
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_bootdev_hunter_2_mmc_bootdev_hunter
+0000000000000000         *UND*	0000000000000000 _u_boot_list_2_bootdev_hunter_2_eth_bootdev_hunt
+
+

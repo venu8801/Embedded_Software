@@ -1991,5 +1991,6 @@ struct fit_loadable_tbl {
  * Return:      0 on success, non-zero otherwise
  */
 int fit_update(const void *fit);
-
 #endif	/* __IMAGE_H__ */
+
+

@@ -51,5 +51,5 @@
 
 bool is_usb_boot(void);
 void disconnect_from_pc(void);
-#define is_boot_from_usb  is_usb_boot
+#define is_boot_from_usb(void)  is_usb_boot
 #endif /* __ASM_ARCH_IMX8_REGS_H__ */

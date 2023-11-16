@@ -2,8 +2,9 @@
 /*
  * Copyright 2019 NXP
  */
+
 #include <asm/mach-imx/sys_proto.h>
-#include <fb_fsl.h>
+#include<fb_fsl.h>
 #include <fastboot.h>
 #include <mmc.h>
 #include <android_image.h>
@@ -17,12 +18,11 @@
 #include <asm/arch/sys_proto.h>
 #include <asm/setup.h>
 #include <env.h>
-#include <lz4.h>
+//#include <lz4.h>
 #include "../lib/avb/fsl/utils.h"
 #define ARCH_DMA_MINALIGN       128
 #include<command.h>
 #include<common.h>
-#include<linker_lists.h>
 #ifdef CONFIG_AVB_SUPPORT
 #include <dt_table.h>
 #include <fsl_avb.h>
@@ -34,18 +34,18 @@
 #include "../lib/avb/fsl/fsl_avbkey.h"
 #include "../arch/arm/include/asm/mach-imx/hab.h"
 #endif
-
+#include<configs/phycore_imx8mp_android.h>
 #if defined(CONFIG_FASTBOOT_LOCK)
-#include "fastboot_lock_unlock.h"
+#include "../drivers/fastboot/fb_fsl/fastboot_lock_unlock.h"
 #endif
 
 #ifdef CONFIG_IMX_TRUSTY_OS
-#include "u-boot/sha256.h"
+#include "../drivers/fastboot/fb_fsl/u-boot/sha256.h"
 #include <trusty/libtipc.h>
 #include <trusty/hwcrypto.h>
 #endif
 
-#include "fb_fsl_common.h"
+#include "../drivers/fastboot/fb_fsl/fb_fsl_common.h"
 
 /* max kernel image size */
 #ifdef CONFIG_ARCH_IMX8
@@ -62,14 +62,6 @@
 /* Offset (in u32's) of start and end fields in the zImage header. */
 #define ZIMAGE_START_ADDR	10
 #define ZIMAGE_END_ADDR	11
-
-/* declarations manually added by venu */
-int android_image_check_header_v3(const struct boot_img_hdr_v3 *hdr, const struct vendor_boot_img_hdr_v3 *vendor_hdr);
-int android_image_get_kernel_v3(const struct boot_img_hdr_v3 *hdr, const struct vendor_boot_img_hdr_v3 *vendor_hdr);
-
-
-
-
 
 /* Boot metric variables */
 boot_metric metrics = {
@@ -234,7 +226,7 @@ U_BOOT_CMD(
 #endif
 
 #ifdef CONFIG_CMD_BOOTA
-	
+
 /* Section for Android bootimage format support */
 
 #if !defined(CONFIG_ANDROID_DYNAMIC_PARTITION) && defined(CONFIG_SYSTEM_RAMDISK_SUPPORT)
@@ -510,7 +502,7 @@ fail:
 }
 #endif
 
-#if defined(CONFIG_AVB_SUPPORT) && defined(CONFIG_MMC)
+//#if defined(CONFIG_AVB_SUPPORT) && defined(CONFIG_MMC)
 /* we can use avb to verify Trusty if we want */
 const char *requested_partitions_boot[] = {"boot", "dtbo", "vendor_boot", NULL};
 const char *requested_partitions_recovery[] = {"recovery", NULL};
@@ -518,7 +510,7 @@ const char *requested_partitions_recovery[] = {"recovery", NULL};
 static bool gki_is_enabled(void)
 {
 	size_t size;
-	struct andr_boot_img_hdr_v0 hdr;
+	struct andr_img_hdr hdr;
 	char partition_name[20];
 
 #ifdef CONFIG_ANDROID_AB_SUPPORT
@@ -539,7 +531,7 @@ static bool gki_is_enabled(void)
 
 	/* Read boot header to find the version */
 	if (fsl_avb_ops.read_from_partition(&fsl_avb_ops, partition_name,
-					    0, sizeof(struct andr_boot_img_hdr_v0),
+					    0, sizeof(struct andr_img_hdr),
 					    (void *)&hdr, &size)) {
 		printf("%s load error!\n", partition_name);
 		return false;
@@ -578,7 +570,9 @@ bool __weak is_power_key_pressed(void) {
 	return false;
 }
 
-int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
+static int do_boota(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
+	
+	int``
 	ulong addr = 0;
 	u32 avb_metric;
 	bool check_image_arm64 =  false;
@@ -685,8 +679,8 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 				goto fail;
 			}
 		} else {
-			hdr = (struct andr_boot_img_hdr_v0 *)avb_loadpart->data;
-			if (is_android_boot_image_header(hdr)) {
+			hdr = (struct andr_img_hdr *)avb_loadpart->data;
+			if (android_image_check_header(hdr)) {
 				printf("boota: bad boot image magic\n");
 				goto fail;
 			}
@@ -787,7 +781,7 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 	 * load ramdisk in recovery mode.
 	 */
 	if (gki_is_supported) {
-		printf("gki_is_supported = %d\n",gki_is_supported);
+		printf("gki_is_supported = %s\n",gki_is_supported);
 
 		/* Need to concatenate vendor_boot ramdisk and boot ramdisk, check
 		 * "include/android_image.h" for boot/vendor_boot image overlay.
@@ -873,7 +867,7 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 	} else {
 		check_image_arm64  = image_arm64((void *)(ulong)hdr->kernel_addr);
 		if (check_image_arm64) {
-			android_image_get_kernel(hdr,NULL, 0, NULL, NULL);
+			android_image_get_kernel(hdr, 0, NULL, NULL);
 			addr = hdr->kernel_addr;
 		} else {
 			addr = (ulong)(hdr->kernel_addr - hdr->page_size);
@@ -971,20 +965,25 @@ fail:
 
 	return run_command("fastboot 0", 0);
 }
-U_BOOT_CMD(
-        boota,  CONFIG_SYS_MAXARGS,     1,      do_boota,
+/*U_BOOT_CMD(
+        boota,  3,     0,      do_boota,
         "boot Linux kernel 'Image' format from memory", "help--\n"
-);
+)*/
 
-
-/* U_BOOT_CMD(
-	boota,	2,	1,	do_boota,
+U_BOOT_CMD(
+        boot_android,  1,      0,      do_boota,
+        "print \"Hello world!\"",
+        "\n    - print \"Hello world!\""
+)
+~  
+/*U_BOOT_CMD(
+	boota,	2,	0,	do_boota,
 	"boota   - boot android bootimg \n",
 	"boot from current mmc with avb verify\n"
-); 
-*/
+); */ 
 
-#else /* CONFIG_AVB_SUPPORT */
+
+//#else /* CONFIG_AVB_SUPPORT 
 /* boota <addr> [ mmc0 | mmc1 [ <partition> ] ] 
  * */
 
@@ -1167,4 +1166,6 @@ U_BOOT_CMD(
 );
 #endif /* CONFIG_AVB_SUPPORT */
 #endif	/* CONFIG_CMD_BOOTA */
+
+
 #endif /*for if 0*/

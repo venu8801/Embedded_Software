@@ -21,17 +21,17 @@
 #include<configs/phycore_imx8mp_android.h>
 #include <fsl_avb.h>
 #ifdef FASTBOOT_ENCRYPT_LOCK
-#include<asm/arch-imx8/imx-regs.h>
 #include <hash.h>
 #include <fsl_caam.h>
 #include<linux/delay.h>
+#include<asm/arch-imx8/imx-regs.h>
+//#define is_boot_from_usb  is_usb_boot
 
-#define is_boot_from_usb  is_usb_boot
-
-bool is_usb_boot(void)
+/*bool is_usb_boot(void)
 {
         return get_boot_device() == USB_BOOT;
 }
+*/
 //Encrypted data is 80bytes length.
 #define ENDATA_LEN 80
 
@@ -379,7 +379,7 @@ FbLockState fastboot_get_lock_stat(void) {
 	int mmc_id;
 	FbLockState ret;
 	/* uboot used by uuu will boot from USB, always return UNLOCK state */
-	if (is_boot_from_usb())
+	if (false)
 		return g_lockstat;
 
 	bdata = (unsigned char *)memalign(ARCH_DMA_MINALIGN, SECTOR_SIZE);
@@ -644,7 +644,7 @@ int fastboot_wipe_data_partition(void)
 		printf("erase not complete\n");
 		return -1;
 	}
-	mdelay(2000);
+	sdelay(2000);
 
 	return 0;
 }

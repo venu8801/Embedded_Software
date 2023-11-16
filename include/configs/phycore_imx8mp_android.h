@@ -47,6 +47,7 @@
 #define BOOTLOADER_RBIDX_START   0x3FF000
 #define BOOTLOADER_RBIDX_LEN     0x08
 #define BOOTLOADER_RBIDX_INITVAL 0
+#define CONFIG_BOOTA
 #endif
 
 #endif

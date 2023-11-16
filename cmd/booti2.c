@@ -15,7 +15,7 @@
 #include <asm/global_data.h>
 #include <linux/kernel.h>
 #include <linux/sizes.h>
-int do_boota(struct cmd_tbl *cmdtp, int flag, int argc, char * const argv[]);
+
 DECLARE_GLOBAL_DATA_PTR;
 /*
  * Image booting support
@@ -155,9 +155,6 @@ static char booti_help_text[] =
 #endif
 
 U_BOOT_CMD(
-	booti,	CONFIG_SYS_MAXARGS,	1,	do_booti,
+	boota,	CONFIG_SYS_MAXARGS,	1,	do_boota,
 	"boot Linux kernel 'Image' format from memory", booti_help_text
 );
-
-
-

@@ -331,6 +331,10 @@ enum boot_device get_boot_device(void)
 
 	sc_rsrc_t dev_rsrc;
 
+	/* Note we only support android in EMMC SDHC0 */
+	if (IS_ENABLED(CONFIG_XEN))
+		return MMC1_BOOT;
+
 	sc_misc_get_boot_dev(-1, &dev_rsrc);
 
 	switch (dev_rsrc) {

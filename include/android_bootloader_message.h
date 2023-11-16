@@ -32,6 +32,7 @@
 // are not configurable without changing all of them.
 static const size_t BOOTLOADER_MESSAGE_OFFSET_IN_MISC = 0;
 static const size_t WIPE_PACKAGE_OFFSET_IN_MISC = 16 * 1024;
+static const size_t SYSTEM_SPACE_SIZE_IN_MISC = 32 * 1024;
 
 /* Bootloader Message (2-KiB)
  *
