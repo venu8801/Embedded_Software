@@ -294,10 +294,17 @@ FbLockState fastboot_get_lock_stat(void) {
 		return FASTBOOT_UNLOCK;
 #endif
 	ret = trusty_read_lock_state(&l_status);
+	printf("trusty read lock state : %d\n", ret);
 	if (ret < 0)
+	{
+		printf("returning g_lockstat\n");
 		return g_lockstat;
+	}
 	else
+	{
+		printf("returning g_lockstat\n");
 		return l_status;
+	}
 
 }
 

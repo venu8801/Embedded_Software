@@ -72,7 +72,10 @@ static ulong bootloader_mmc_offset(void)
 			return 0x8000;
 	}
 	else if (is_imx8())
+	{
+		printf("------IMX8-----\n");
 		return 0x8000;
+	}
 	else
 		return 0x400;
 }
@@ -151,6 +154,8 @@ static int _fastboot_parts_load_from_ptable(void)
 	/* sata case in env */
 	if (fastboot_devinfo.type == DEV_SATA) {
 #ifdef CONFIG_DM_SCSI
+                printf("entered DEV_SATA case\n");
+
 		int sata_device_no = fastboot_devinfo.dev_id;
 		puts("flash target is SATA\n");
 		scsi_scan(false);
@@ -160,6 +165,8 @@ static int _fastboot_parts_load_from_ptable(void)
 		return -1;
 #endif /*! CONFIG_SATA*/
 	} else if (fastboot_devinfo.type == DEV_MMC) {
+		                printf("entered DEV_SATA case\n");
+
 		int mmc_no = fastboot_devinfo.dev_id;
 
 		printf("flash target is MMC:%d\n", mmc_no);
@@ -286,15 +293,22 @@ void fastboot_flash_dump_ptn(void)
 
 struct fastboot_ptentry *fastboot_flash_find_ptn(const char *name)
 {
+	printf("Entered %s\n",__func__);
 	unsigned int n;
-
+	printf("g_pcount: %d\n",g_pcount);
+	printf("returning with 0 %s\n",__func__);
 	for (n = 0; n < g_pcount; n++) {
 		/* Make sure a substring is not accepted */
 		if (strlen(name) == strlen(g_ptable[n].name)) {
 			if (0 == strcmp(g_ptable[n].name, name))
+			{
+				printf("returning with %d %s\n",g_pcount + n,__func__);
 				return g_ptable + n;
+			}
 		}
 	}
+
+	printf("returning with 0 %s\n",__func__);
 
 	return 0;
 }
@@ -302,6 +316,7 @@ struct fastboot_ptentry *fastboot_flash_find_ptn(const char *name)
 int fastboot_flash_find_index(const char *name)
 {
 	struct fastboot_ptentry *ptentry = fastboot_flash_find_ptn(name);
+
 	if (ptentry == NULL) {
 		printf("cannot get the partion info for %s\n",name);
 		fastboot_flash_dump_ptn();

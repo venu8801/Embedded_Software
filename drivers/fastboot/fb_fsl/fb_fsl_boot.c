@@ -612,7 +612,7 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 
 	bool allow_fail = (lock_status == FASTBOOT_UNLOCK ? true : false);
 	avb_metric = get_timer(0);
-
+	printf("-----get_timer------\n");
 	if (gki_is_enabled())
 		/* set flag when GKI is enabled, vendor_boot partition will be supported. */
 		gki_is_supported = true;
@@ -661,6 +661,8 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 #ifdef CONFIG_SYSTEM_RAMDISK_SUPPORT
 		if (find_partition_data_by_name("boot", avb_out_data, &avb_loadpart))
 			goto fail;
+		else
+			printf("ret: 0 at find_partition_data_by_name for boot/ \n");
 		if (gki_is_supported && find_partition_data_by_name("vendor_boot", avb_out_data, &avb_vendorboot))
 			goto fail;
 #else
@@ -965,6 +967,7 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 	return 1;
 
 fail:
+	printf("------FAILED-------\n");
 	/* avb has no recovery */
 	if (avb_out_data != NULL)
 		avb_slot_verify_data_free(avb_out_data);

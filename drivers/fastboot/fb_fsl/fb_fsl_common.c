@@ -107,7 +107,7 @@ int get_block_size(void) {
         return dev_desc->blksz;
 }
 
-struct fastboot_device_info fastboot_devinfo = {0xff, 0xff};
+struct fastboot_device_info fastboot_devinfo = {0x01, 0xff};
 
 #ifdef CONFIG_FLASH_MCUFIRMWARE_SUPPORT
 struct fastboot_device_info fastboot_firmwareinfo;
