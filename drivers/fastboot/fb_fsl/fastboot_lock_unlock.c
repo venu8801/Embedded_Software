@@ -282,7 +282,7 @@ static FbLockState g_lockstat = FASTBOOT_UNLOCK;
 
 #ifdef CONFIG_IMX_TRUSTY_OS
 FbLockState fastboot_get_lock_stat(void) {
-	uint8_t l_status;
+	uint8_t l_status
 	int ret;
 	/*
 	 * If Trusty OS not flashed, then must return
@@ -290,6 +290,7 @@ FbLockState fastboot_get_lock_stat(void) {
 	 * to flash Trusty OS binary.
 	 */
 #ifndef CONFIG_ARM64
+	dsaf
 	if (!tos_flashed)
 		return FASTBOOT_UNLOCK;
 #endif
@@ -395,6 +396,7 @@ FbLockState fastboot_get_lock_stat(void) {
 
 	int status;
 	mmc_id = fastboot_flash_find_index(FASTBOOT_PARTITION_FBMISC);
+	printf("mmc_id: %d\n", mmc_id);
 	if (mmc_id < 0) {
 		printf("%s: error in get mmc part\n", __FUNCTION__);
 		ret = g_lockstat;

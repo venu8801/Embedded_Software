@@ -579,6 +579,10 @@ bool __weak is_power_key_pressed(void) {
 }
 
 int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
+	        printf("----cdm line args----%s----\n",__func__);
+        printf("command name: %s\n",cmdtp->name);
+
+
 	ulong addr = 0;
 	u32 avb_metric;
 	bool check_image_arm64 =  false;
@@ -604,6 +608,7 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 
 	/* check lock state */
 	FbLockState lock_status = fastboot_get_lock_stat();
+	printf("%s------lock_status: %d \n",__func__,lock_status);
 	if (lock_status == FASTBOOT_LOCK_ERROR) {
 		printf("In boota get fastboot lock status error. Set lock status\n");
 		fastboot_set_lock_stat(FASTBOOT_LOCK);
@@ -611,6 +616,7 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 	}
 
 	bool allow_fail = (lock_status == FASTBOOT_UNLOCK ? true : false);
+	printf("allow fail: %d\n",allow_fail);
 	avb_metric = get_timer(0);
 	printf("-----get_timer------\n");
 	if (gki_is_enabled())
@@ -619,13 +625,14 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 	else {
 		requested_partitions_boot[2] = NULL;
 	}
-
+	printf("gki is supported: %d\n",gki_is_supported);
 	/* For imx6 on Android, we don't have a/b slot and we want to verify boot/recovery with AVB.
 	 * For imx8 and Android Things we don't have recovery and support a/b slot for boot */
 #ifdef CONFIG_DUAL_BOOTLOADER
 	/* We will only verify single one slot which has been selected in SPL */
 	avb_result = avb_flow_dual_uboot(&fsl_avb_ab_ops, requested_partitions_boot, allow_fail,
 			AVB_HASHTREE_ERROR_MODE_RESTART_AND_INVALIDATE, &avb_out_data);
+	
 
 	/* Reboot if current slot is not bootable. */
 	if (avb_result == AVB_AB_FLOW_RESULT_ERROR_NO_BOOTABLE_SLOTS) {
@@ -637,6 +644,21 @@ int do_boota( cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[]) {
 	/* we can use avb to verify Trusty if we want */
 	avb_result = avb_ab_flow_fast(&fsl_avb_ab_ops, requested_partitions_boot, allow_fail,
 			AVB_HASHTREE_ERROR_MODE_RESTART_AND_INVALIDATE, &avb_out_data);
+	/* added by venu */
+	if(avb_result == AVB_AB_FLOW_RESULT_OK)
+		printf("avb result: AVB_AB_FLOW_RESULT_OK\n");
+	
+	if(avb_result == AVB_AB_FLOW_RESULT_OK_WITH_VERIFICATION_ERROR)
+		printf("avb result: AVB_AB_FLOW_RESULT_OK_WITH_VERIFICATION_ERROR\n");
+	
+	if(avb_result == AVB_AB_FLOW_RESULT_ERROR_OOM)
+		printf("avb result: AVB_AB_FLOW_RESULT_ERROR_OOM\n");
+	
+	if(avb_result == AVB_AB_FLOW_RESULT_ERROR_IO)
+		printf("avb result: AVB_AB_FLOW_RESULT_ERROR_IO\n");
+
+	if(avb_result == AVB_AB_FLOW_RESULT_ERROR_INVALID_ARGUMENT)
+		printf("avb_result: AVB_AB_FLOW_RESULT_ERROR_INVALID_ARGUMENT\n");
 #else /* CONFIG_ANDROID_AB_SUPPORT */
 	/* For imx6/7 devices. */
 	if (is_recovery_mode) {
